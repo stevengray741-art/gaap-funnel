@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>You're in — GAAP Method</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #05080c;
+      color: #dcdcdc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      max-width: 480px;
+      width: 100%;
+      background: #0a0f17;
+      border: 1px solid #1a2535;
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .check { font-size: 48px; margin-bottom: 12px; }
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #aee489;
+      margin-bottom: 8px;
+    }
+    .sub {
+      font-size: 14px;
+      color: #8899aa;
+      line-height: 1.6;
+      margin-bottom: 8px;
+    }
+    .small-sub {
+      font-size: 13px;
+      color: #667;
+      margin-bottom: 28px;
+    }
+    .suggest {
+      font-size: 11px;
+      color: #556;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .option {
+      display: block;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: #111820;
+      border: 1px solid #1a2535;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #dcdcdc;
+      text-align: left;
+      transition: all 0.15s;
+    }
+    .option:hover { border-color: #0897e0; background: #141d28; }
+    .option.primary {
+      background: linear-gradient(135deg, #111820, #0d1a24);
+      border-color: #0897e0;
+    }
+    .option-label {
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 3px;
+      color: #fff;
+    }
+    .option-desc {
+      font-size: 12px;
+      color: #667;
+    }
+    .option.primary .option-label { color: #aee489; }
+    .option.primary .option-desc { color: #8899aa; }
+
+    .footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #1a2535;
+      font-size: 11px;
+      color: #445;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #aee489;
+      box-shadow: 0 0 6px rgba(174,228,137,0.6);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="check">✅</div>
+    <h1>You're in!</h1>
+    <p class="sub">PDF is on its way to your inbox.</p>
+    <p class="small-sub">What would you like to do next?</p>
+
+    <div class="suggest">Join the community</div>
+
+    <a href="https://www.skool.com/gaap-method-8831" class="option primary">
+      <div class="option-label">→ Join the Free GAAP Skool Group</div>
+      <div class="option-desc">Training, playbooks, and direct access to me. Best place to start.</div>
+    </a>
+
+    <a href="https://www.facebook.com/groups/gaapmethod" class="option">
+      <div class="option-label">→ Join the GAAP Facebook Group</div>
+      <div class="option-desc">Daily posts. Conversations. The casual side.</div>
+    </a>
+
+    <div class="suggest" style="margin-top:20px;">Ready to get straight into it?</div>
+
+    <a href="https://www.skool.com/ai-seo-with-julian-goldie-1553/about" class="option">
+      <div class="option-label">→ Julian Goldie's AI Money Lab</div>
+      <div class="option-desc">75,000+ members. Free 6-module AI course. 1,000+ n8n workflows.</div>
+    </a>
+
+    <a href="https://olspfunnels.com/megalink-2-front-end?olsp=1493165" class="option">
+      <div class="option-label">→ Wayne Crowe's OLSP Megalink</div>
+      <div class="option-desc">Start for £7. Earn while you learn. 100% commissions.</div>
+    </a>
+
+    <div class="footer">
+      <div class="dot"></div>
+      <span>GAAP · closing the gap ↑</span>
+    </div>
+  </div>
+</body>
+</html>

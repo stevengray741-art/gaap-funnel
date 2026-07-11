@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GAAP Method — Free AI Starter Kit</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #05080c;
+      color: #dcdcdc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .card {
+      max-width: 480px;
+      width: 100%;
+      background: #0a0f17;
+      border: 1px solid #1a2535;
+      border-radius: 16px;
+      padding: 40px 32px;
+      text-align: center;
+    }
+    .emoji { font-size: 40px; margin-bottom: 12px; }
+    h1 {
+      font-size: 22px;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .sub {
+      font-size: 14px;
+      color: #8899aa;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    input {
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: #111820;
+      border: 1px solid #1a2535;
+      color: #fff;
+      font-size: 15px;
+      font-family: inherit;
+      outline: none;
+      transition: border 0.2s;
+    }
+    input:focus { border-color: #0897e0; }
+    button {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #1793d6, #0897e0);
+      color: #05080c;
+      border: none;
+      font-weight: 700;
+      font-size: 15px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    button:hover { opacity: 0.9; transform: translateY(-1px); }
+    button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+    .trust {
+      font-size: 11px;
+      color: #556;
+      margin-top: 16px;
+    }
+    .brand {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #1a2535;
+      font-size: 11px;
+      color: #445;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: #aee489;
+      box-shadow: 0 0 6px rgba(174,228,137,0.6);
+    }
+    #msg { font-size: 13px; margin-top: 12px; display: none; }
+    #msg.error { color: #ff6464; display: block; }
+    #msg.success { color: #aee489; display: block; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji">📘</div>
+    <h1>Free AI Affiliate Starter Kit</h1>
+    <p class="sub">
+      AI tools, automation workflows, and the exact affiliate systems I use — packed into one PDF.
+      Drop your details below and I'll send it straight to your inbox.
+    </p>
+
+    <form name="capture" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/done">
+      <input type="hidden" name="form-name" value="capture">
+      <p hidden><input name="bot-field"></p>
+
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your name" required>
+        <input type="email" name="email" placeholder="Your email" required>
+      </div>
+
+      <button type="submit">Send Me the Free PDF →</button>
+    </form>
+
+    <p id="msg"></p>
+    <p class="trust">No spam. No sharing your email. Just the PDF and occasional updates.</p>
+
+    <div class="brand">
+      <div class="dot"></div>
+      <span>GAAP · closing the gap ↑</span>
+    </div>
+  </div>
+</body>
+</html>

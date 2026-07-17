@@ -4,6 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GAAP Method — Free AI Starter Kit</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', 'YOUR_PIXEL_ID');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -59,11 +78,16 @@
       Drop your details below and I'll send it straight to your inbox.
     </p>
 
-    <form action="https://formsubmit.co/clickbank1040@gmail.com" method="POST">
+    <form id="lead-form" action="https://formsubmit.co/clickbank1040@gmail.com" method="POST">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://stevengray741-art.github.io/gaap-funnel/done.html">
       <input type="hidden" name="_subject" value="New GAAP Lead">
       <input type="hidden" name="_template" value="table">
+
+      <!-- UTM tracking fields (populated by JS) -->
+      <input type="hidden" name="utm_source" id="utm_source" value="">
+      <input type="hidden" name="utm_medium" id="utm_medium" value="">
+      <input type="hidden" name="utm_campaign" id="utm_campaign" value="">
 
       <div class="form-group">
         <input type="text" name="name" placeholder="Your name" required>
@@ -80,5 +104,28 @@
       <span>GAAP · closing the gap ↑</span>
     </div>
   </div>
+
+  <!-- UTM Capture Script -->
+  <script>
+  (function() {
+    var params = new URLSearchParams(window.location.search);
+    var utmSource = params.get('utm_source') || '';
+    var utmMedium = params.get('utm_medium') || '';
+    var utmCampaign = params.get('utm_campaign') || '';
+    if (utmSource) document.getElementById('utm_source').value = utmSource;
+    if (utmMedium) document.getElementById('utm_medium').value = utmMedium;
+    if (utmCampaign) document.getElementById('utm_campaign').value = utmCampaign;
+
+    // Meta Lead event on form submit
+    document.getElementById('lead-form').addEventListener('submit', function() {
+      if (typeof fbq !== 'undefined') {
+        fbq('track', 'Lead', {
+          content_name: 'GAAP Free AI Starter Kit',
+          content_category: 'Lead Magnet'
+        });
+      }
+    });
+  })();
+  </script>
 </body>
 </html>
